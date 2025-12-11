@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://assets.ppy.sh/skins/123/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MinePrev - Minecraft Thumbnail Tool</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mc: {
+                black: '#111111',
+                dark: '#1c1c1c',
+                green: '#55FF55',
+                greenDark: '#00AA00',
+                gray: '#AAAAAA',
+                dirt: '#8B4513',
+                stone: '#7d7d7d',
+                obsidian: '#141019',
+                gold: '#FFAA00',
+                diamond: '#55FFFF',
+                redstone: '#FF5555',
+                sculk: '#0B3E42',
+                nether: '#380103'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              pixel: ['"VT323"', 'monospace'], 
+            },
+            boxShadow: {
+              'mc': 'inset -4px -4px #00000088, inset 4px 4px #FFFFFF44',
+              'mc-btn': 'inset -4px -4px rgba(0,0,0,0.5), inset 4px 4px rgba(255,255,255,0.25)',
+              'mc-active': 'inset 4px 4px rgba(0,0,0,0.5), inset -4px -4px rgba(255,255,255,0.25)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Skinview3d Library -->
+    <script src="https://bs-community.github.io/skinview3d/js/skinview3d.bundle.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #050505; /* Deep Dark */
+        color: white;
+        background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+        background-attachment: fixed;
+      }
+      
+      h1, h2, h3, h4, h5, h6, .font-pixel {
+        font-family: 'VT323', monospace;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      /* Minecraft Button Style */
+      .mc-btn-style {
+        image-rendering: pixelated;
+        border: 2px solid #000;
+        box-shadow: inset -4px -4px rgba(0,0,0,0.4), inset 4px 4px rgba(255,255,255,0.2);
+        transition: all 0.1s;
+      }
+      .mc-btn-style:active {
+        box-shadow: inset 4px 4px rgba(0,0,0,0.4), inset -4px -4px rgba(255,255,255,0.2);
+        transform: translateY(2px);
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+        background: #111;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000; 
+        border-left: 1px solid #333;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #555; 
+        border: 2px solid #000;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #777;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
